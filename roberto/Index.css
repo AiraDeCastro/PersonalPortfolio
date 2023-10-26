@@ -1,0 +1,187 @@
+*{
+  margin: 0;
+  border: 0;
+}
+#header{
+  width:100%;
+  height:100%;
+}
+
+body{
+  background: rgb(232, 238, 216); 
+  padding: 40px;
+}
+
+#resumeback {
+  background-image: url("images/caitlin-steinlocke-zjaxdaGW0RA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+header{
+  padding: 10px;
+} 
+.navBar {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navBar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1%;
+}
+
+.navBar li {
+  margin-left: 10px;
+}
+
+nav ul li a {
+  color :black;
+  font: size 15px;
+  text-decoration: none;
+
+}
+/* Navigation links on hover */
+.navBar a:hover {
+  /* background-color: #f0f0f0; */
+  color: rgb(222, 222, 238); /* Change text color on hover */
+  border-radius: 5px; /* Add rounded corners on hover */
+}
+.paragraph{
+  margin-top:20px;
+  font-size :30px;
+  padding-left: 50px;
+  display: grid;
+}
+.paragraph h1{
+  margin-top:30px;
+  font-size :20px;
+}
+.paragraph a {
+  display:inline-block;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  width: 250px;
+}
+.paragraph strong {
+  font-weight: bold;
+}
+
+.paragraph a:hover {
+  background-color: #f0f0f0;
+}
+img { 
+  width: 300px; /* Adjust the width to your desired size*/
+  height: 300px; /* Adjust the height to your desired size */
+    /*Set the border-radius to create an oval shape */
+  float: right;
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  main {
+  width: 100%;
+  padding: 0;
+  }
+  .project-links {
+  width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .project-links, main {
+  width: 100%;
+  }
+}
+
+/* resume styling  */
+/* .centered {
+  text-align: center;
+  line-height: 4.5;
+}*/
+.center { 
+  
+  line-height: 2.5;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right:70%;
+  line-height: 2.5;
+  padding-left: 20px; 
+}
+
+.project-links a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-links img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project-links span {
+  font-weight: bold;
+}
+
+.box {
+  display: flexbox;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+
+
+/* CSS for the main container */
+.coursepictures{
+  float: left;
+  max-width: 350px;
+}
+
+.Level1{
+  display: flexbox;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.Level2{
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.textbooks{
+  padding: 8px;
+  text-align: left;
+  /* box-shadow: ; */
+  width: 100%;
+  height: 200px;
+  margin-bottom: 5px;
+}
+.textbooks img{
+  width: 140px;
+  height: 180px;
+  padding: 10px;
+}
