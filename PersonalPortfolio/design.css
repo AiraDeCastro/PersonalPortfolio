@@ -1,8 +1,49 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+    margin: 0;
+    background-color: #1d1d1d;
+}
+
+/* navigation bar */
+.navbar {
+    width: 100%;
+    overflow: auto;
+}
+
+.navbar a {
+    float: left;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 32%; /* Four links of equal widths */
+    text-align: center;
+    color: white;
+    font-family: sans-serif, 'Courier New';
+}
+
+.navbar a:hover {
+    background-color: #000;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    }
+}
+
+/* index page */
 .aira {
     width: 300px;
     height: auto;
@@ -11,50 +52,29 @@
     padding-top: 20px;
     padding-bottom: 10px;
 }
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 5px;
-    margin: 0;
-}
-.mainNavBar {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
-}
-.mainPage {
-    float: right;
-    width: 75%;
-}
 .name {
-    float: left;
-    font-size: 22px;
-    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    font-size: 60px;
+    color: white;
     font-family: Georgia, 'Times New Roman', Times;
-    letter-spacing: 4px;
-    text-align: center;
-    padding: 10px;
-    padding-left: 50px;
+    font-weight: bold;
+    position: fixed;
+    animation: move 6s linear infinite;
 }
-li a {
-    display: block;
-    padding: 9px;
-    background-color: #99A98F;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    border-radius: 30px;
-    font-weight: 600;
-    margin: 3px;
+
+@keyframes move {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(calc(-1 * 100%));
+    }
 }
-li a:hover {
-    background-color: #C1D0B5;
-}
+
 main {
     align-self: center;
     text-align: center;
-}
-div p {
-    margin: 10px;
 }
 div li {
     text-align: left;
@@ -67,12 +87,19 @@ img {
 h1 {
     padding: 10px;
 }
+/* resume page */
 section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 30px;
     padding: 5px;
+}
+.left {
+    text-align: left;
+}
+.box div ul li {
+    list-style-type: square;
 }
 .box {
     background-color: #99A98F;
@@ -95,10 +122,17 @@ section {
     left: 5px;
     top: 5px;
 }
+.projects {
+    text-align: center;
+    align-content: center;
+    margin-top: 20px;
+}
+/* courses page */
 .js-courses {
     margin-top: 10px;
     display: flex;
     padding: 10px;
+    flex-wrap: wrap;
 }
 .js-courses ul {
     padding: 0;
@@ -159,12 +193,6 @@ button:hover {
     margin: 5px;
     margin-top: 10px;
 }
-.left {
-    text-align: left;
-}
-.box div ul li {
-    list-style-type: square;
-}
 .link {
     background-color: #99A98F;
     padding: 10px;
@@ -181,23 +209,13 @@ button:hover {
     color: black;
     font-weight: bold;
 }
-.projects {
-    flex-wrap: wrap;
-    text-align: center;
-    align-content: center;
-    margin-top: 20px;
-}
+
 div a {
     padding: 10px;
 }
 div a img {
     width: 300px;
     height: 230px;
-}
-footer {
-    text-align: end;
-    padding: 10px;
-    background-color: #C1D0B5;
 }
 .labs {
     text-align: center;
@@ -206,9 +224,15 @@ footer {
     text-align: center;
     align-content: baseline;
 }
+footer {
+    text-align: end;
+    padding: 10px;
+    background-color: #C1D0B5;
+}
+/*
 @media only screen and (max-width:800px) {
-    /* For tablets: */
-    main {
+    /* For tablets: 
+    {
     width: 100%;
     padding: 0;
     }
@@ -217,15 +241,9 @@ footer {
     }
 }
 @media only screen and (max-width:500px) {
-    /* For mobile phones: */
+    /* For mobile phones: 
     .container, main, .box {
     width: 100%;
     }
 }
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-    .navbar, .mainPage {   
-    width: 100%;
-    padding: 0;
-    }
-}
+*/
